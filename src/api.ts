@@ -1,5 +1,5 @@
 // api.ts
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://mynt2.onrender.com';
 
 interface WaitlistSubmission {
   name: string;
@@ -76,6 +76,39 @@ export const api = {
         throw error;
       }
       throw new ApiError('Failed to fetch stats', 500);
+    }
+  },
+
+  // New warmup function
+  async warmupBackend(): Promise<boolean> {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
+      const response = await fetch(`${API_BASE_URL}/health`, {
+        method: 'GET',
+        signal: controller.signal,
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+        },
+      });
+      
+      clearTimeout(timeoutId);
+      
+      if (!response.ok) {
+        console.warn(`Backend health check returned status: ${response.status}`);
+        return false;
+      }
+
+      const data = await response.json();
+      return data.status === 'healthy';
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') {
+        console.log('Backend warmup timed out - server might be starting up');
+      } else {
+        console.log('Backend warmup failed:', error);
+      }
+      return false;
     }
   }
 };
