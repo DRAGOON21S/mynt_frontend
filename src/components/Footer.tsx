@@ -3,8 +3,8 @@ import { Mail, Linkedin, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const socialLinks = [
-  { icon: <Linkedin size={20} />, href: '#', label: 'LinkedIn' },
-  { icon: <Instagram size={20} />, href: '#', label: 'Instagram' },
+  { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/company/myntstudio/', label: 'LinkedIn' },
+  // { icon: <Instagram size={20} />, href: '#', label: 'Instagram' },
 ];
 
 const Footer: React.FC = () => {
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             </div>
             
             <p className="text-white/70 mb-4">
-              Redefining marketing automation with autonomous AI agents that deliver exceptional results.
+              Redefining marketing automation with agentic AI agents that deliver exceptional results.
             </p>
             
             <div className="flex space-x-3">
@@ -44,8 +44,8 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
             <div className="flex items-center space-x-3 mb-4">
               <Mail size={18} className="text-teal" />
-              <a href="mailto:hello@agentic.ai" className="text-white/70 hover:text-teal transition-colors duration-200">
-                hello@agentic.ai
+              <a href="mailto:hi@mynt.studio" className="text-white/70 hover:text-teal transition-colors duration-200">
+                hi@mynt.studio
               </a>
             </div>
           </div>

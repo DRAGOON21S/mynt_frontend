@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Mail } from 'lucide-react';
+import AditiImage from './assets/aditi.jpg';
+import ShreyImage from './assets/shrey.jpg';
 import { Link } from 'react-router-dom';
 
 interface TeamMemberProps {
@@ -58,20 +60,20 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, bio, imageUrl, link
 const AboutUs: React.FC = () => {
   const teamMembers = [
     {
-      name: "Alex Johnson",
-      role: "CEO & Co-founder",
-      bio: "Alex has over 15 years of experience in digital marketing and AI. Prior to founding MYNT STUDIO, he led innovation teams at several Fortune 500 companies.",
-      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-      linkedinUrl: "https://linkedin.com",
-      email: "alex@myntstudio.com"
+      name: "Aditi Bansal",
+      role: "Co-founder",
+      bio: "Aditi is currently pursuing Computer Science at BITS Pilani and leads external communications and platform operations at Mynt Studio. She oversees Mynt’s brand voice, social presence, and agency engagement across platforms.",
+      imageUrl: AditiImage,
+      linkedinUrl: "https://linkedin.com/in/aditibansalll",
+      email: "aditi@mynt.studio"
     },
     {
-      name: "Sophia Chen",
-      role: "CTO & Co-founder",
-      bio: "Sophia is an AI researcher with a PhD from MIT. Her groundbreaking work in generative models and autonomous agents forms the backbone of our technology.",
-      imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
-      linkedinUrl: "https://linkedin.com",
-      email: "sophia@myntstudio.com"
+      name: "Shrey Bansal",
+      role: "Co-founder",
+      bio: "Shrey is a Computer Science student at BITS Pilani and leads product development and AI integration at Mynt Studio. He is responsible for building the platform’s core infrastructure and applying intelligent systems to solve campaign challenges.",
+      imageUrl: ShreyImage,
+      linkedinUrl: "https://linkedin.com/in/-shreybansal",
+      email: "shrey@mynt.studio"
     }
   ];
 
@@ -97,12 +99,12 @@ const AboutUs: React.FC = () => {
             </h1>
 
             <p className="text-xl text-white/70 mb-6 max-w-3xl mx-auto leading-relaxed">
-              We're on a mission to revolutionize marketing with autonomous AI agents that deliver exceptional results.
+              We're on a mission to revolutionize marketing with AI agents that deliver exceptional results.
             </p>
 
             <div className="bg-white/5 backdrop-blur-xl rounded-xl border border-white/15 p-6 md:p-8 text-left">
               <p className="text-white/80 mb-4">
-                Founded in 2023, MYNT STUDIO emerged from a simple observation: despite advances in marketing technology, 
+                Founded in 2025, MYNT STUDIO emerged from a simple observation: despite advances in marketing technology, 
                 businesses still struggle with fragmented tools and manual processes that fail to deliver consistent results.
               </p>
               
@@ -112,10 +114,10 @@ const AboutUs: React.FC = () => {
                 CRMs, analytics tools, and campaign managers with a unified system that learns and improves over time.
               </p>
               
-              <p className="text-white/80">
+              {/* <p className="text-white/80">
                 Based in San Francisco with a distributed team across North America and Europe, we're backed by leading 
                 venture capital firms and industry experts who share our vision for the future of marketing.
-              </p>
+              </p> */}
             </div>
           </motion.div>
         </div>
@@ -135,8 +137,8 @@ const AboutUs: React.FC = () => {
             </h2>
 
             <p className="text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
-              We're a diverse team of entrepreneurs, scientists, and engineers passionate about 
-              creating the future of autonomous marketing.
+              We're an enthusiastic team of entrepreneurs and engineers passionate about 
+              creating the future of creator marketing.
             </p>
           </motion.div>
 

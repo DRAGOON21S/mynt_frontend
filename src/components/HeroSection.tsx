@@ -116,7 +116,7 @@ const ThankYouPopup = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
                   Do you have an extra minute to fill out a quick survey? Your feedback would help us develop a better product.
                 </p>
                 <motion.a 
-                  href="#" 
+                  href="https://forms.gle/wvQpLGSWEMEKgAZN7" 
                   className="inline-block px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-magenta-600 to-teal-600 text-white hover:shadow-lg hover:shadow-magenta-500/20 transition-all duration-300"
                   onClick={(e) => e.stopPropagation()}
                   whileHover={{ scale: 1.05 }}
@@ -289,7 +289,7 @@ const HeroSection = () => {
           className="text-center max-w-5xl mx-auto"
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-            Autonomous AI
+            Agentic AI
             <span className="gradient-text block">Marketing Revolution</span>
           </h1>
 

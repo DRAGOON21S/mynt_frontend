@@ -18,10 +18,10 @@ const DifferentiatorsSection: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text inline-block">
-            Why Agentic
+            Why Mynt
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Our autonomous AI agents revolutionize digital marketing with minimal human intervention.
+            Our AI agents revolutionize digital marketing with minimal human intervention.
           </p>
         </motion.div>
         
