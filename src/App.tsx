@@ -6,6 +6,7 @@ import DifferentiatorsSection from './components/DifferentiatorsSection';
 import Footer from './components/Footer';
 import ParallaxProvider from './components/ParallaxProvider';
 import AboutUs from './pages/AboutUs';
+import NutritrackRedirect from './components/NutritrackRedirect';
 
 // Get API URL from environment or use default
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://mynt2.onrender.com';
@@ -66,6 +67,7 @@ function App() {
               </main>
             } />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/nutritrack" element={<NutritrackRedirect />} />
           </Routes>
           <Footer />
         </div>
